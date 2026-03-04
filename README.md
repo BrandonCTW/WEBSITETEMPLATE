@@ -83,7 +83,7 @@ After saving, trigger a redeploy so the variables take effect. The contact form 
 
 ## Step 4 — Autonomous Agents
 
-Run these five bash commands one at a time, in order. Wait for each to finish before running the next. Substitute `CLIENT_NAME` with the actual folder name.
+Run these four bash commands one at a time, in order. Wait for each to finish before running the next. Substitute `CLIENT_NAME` with the actual folder name.
 
 ```
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
@@ -95,13 +95,10 @@ WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/content-agent MODEL="sonn
 WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 ```
-WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
-```
-```
-WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/marketing-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+WORK=/Users/brandonhopkins/Projects/CLIENT_NAME/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=2 bash ~/Projects/claude-lab/ENGINE/run.sh
 ```
 
-**Do not proceed to Step 5 until all five agents have exited.**
+**Do not proceed to Step 5 until all four agents have exited.**
 
 ---
 
@@ -174,4 +171,3 @@ Spawn a **general-purpose** agent (`model="sonnet"`) with this exact prompt (sub
 | `agents/content-agent/` | Content creation agent |
 | `agents/seo-agent/` | SEO optimization agent |
 | `agents/pagespeed-agent/` | Performance optimization agent |
-| `agents/marketing-agent/` | Marketing plan agent |
